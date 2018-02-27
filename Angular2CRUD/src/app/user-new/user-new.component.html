@@ -1,0 +1,42 @@
+
+
+  <section>
+    <section>
+      <p>[user-new.component.ts & html] page</p>
+    </section>
+    <section class="panel panel-default">
+      <section class="panel-heading">Add New User</section>
+      <section class="panel-body">
+        <form class="form-horizontal" (ngSubmit)="addUser()" #userForm="ngForm">
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Name: </label>
+              <div class="col-sm-10">
+                <input type="text" name="name" [(ngModel)]="user.name" required #name="ngModel" placeholder="User Name" class="form-control">
+              </div>
+              <div [hidden]="name.valid || name.pristine" class="error">
+                  Name must not empty!
+              </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="weight">Email: </label>
+            <div class="col-sm-10">
+              <input type="text" name="email" [(ngModel)]="user.email" placeholder="User Email" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="height">Password: </label>
+            <div class="col-sm-10">
+              <input type="text" name="password" [(ngModel)]="user.password" placeholder="User Password" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" (click)="gotoUsersList()" class="btn btn-default">Cancel</button>
+              <span>{{' '}}</span>
+              <button type="button" (click)="addUser()" class="btn btn-info">Save</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+  <section>

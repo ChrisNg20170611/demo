@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>AngularJS User CRUD</title>
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
+        <script src="ApplicationCRUD.js"></script>
+        <script src="Services/IndexServices.js"></script>
+        <script src="Controllers/indexCtrl.js"></script>
+    </head>
+    <body ng-app="MyAppCrud" ng-controller="IndexController">
+        <div><h3>AngularJS</h3></div>
+        <div><p>[index.html] page</p></div>
+        <div><p>{{title+" "+currentDate}}</p></div>
+        <div>
+            <div>
+                <div ng-view></div>
+            </div>
+        </div>    
+     </body>
+</html>
